@@ -42,16 +42,7 @@ async def get_users(
     )
 
 
-@router.post("", response_model=ApiResponse[UserInfo], status_code=201, summary="创建用户")
-async def create_user(
-    data: UserCreate,
-    _current_user: User = Depends(require_role("admin")),
-    db: AsyncSession = Depends(get_db),
-):
-    """创建新用户（需要admin权限）。"""
-    repo = UserRepository(db)
-    user = await repo.create(data)
-    return ApiResponse(code=201, message="用户创建成功", data=UserInfo.model_validate(user))
+
 
 
 @router.put("/{user_id}", response_model=ApiResponse[UserInfo], summary="更新用户信息")
