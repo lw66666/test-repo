@@ -7,7 +7,7 @@ from sqlalchemy import Boolean, Enum, Integer, String, TIMESTAMP
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.core.database import Base
-
+# 这是一个测试修改
 
 class UserRole(str, enum.Enum):
     """用户角色枚举"""
