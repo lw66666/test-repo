@@ -14,5 +14,3 @@ jobs:
         run: echo "Hello from GitHub Actions!"
       - name: Run date
         run: date
-      - name: This will fail
-        # run: exit 1
