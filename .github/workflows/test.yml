@@ -15,4 +15,3 @@ jobs:
       - name: Run date
         run: date
       - name: This will fail
-        # run: exit 1
